@@ -12,4 +12,4 @@ for v in  $H2O_PORT; do
     ports=(${ports[@]} "$v")
 done
 
-exec start_server ${ports[@]} -- /h2o/h2o -c $@
+exec start_server ${ports[@]} -- h2o -c $@
