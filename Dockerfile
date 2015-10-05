@@ -40,8 +40,6 @@ RUN cd /h2o-$H2O_VERSION/ \
   && patch -p0 < /tmp/patches/0-geoip.patch \
   && cd /h2o-$H2O_VERSION/deps/ \
   && git clone https://github.com/matsumoto-r/mruby-geoip \
-  && cd mruby-geoip/ \
-  && patch -p0 < /tmp/patches/1-mruby-geoip-leak.patch \
   && rm -rf /tmp/patches/
 
 RUN curl -L http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz | gzip -d > /usr/share/GeoIP/GeoIPCity.dat
