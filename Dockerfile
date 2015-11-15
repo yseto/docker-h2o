@@ -29,7 +29,7 @@ RUN curl -L -O https://github.com/libuv/libuv/archive/v$LIBUV_VERSION.tar.gz \
   && make install
 
 # h2o
-ENV H2O_VERSION 1.5.0
+ENV H2O_VERSION 1.5.4
 RUN curl -L -O https://github.com/h2o/h2o/archive/v$H2O_VERSION.tar.gz \
   && tar xvfz v$H2O_VERSION.tar.gz \
   && rm v$H2O_VERSION.tar.gz

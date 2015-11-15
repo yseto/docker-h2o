@@ -1,13 +1,10 @@
-diff --git CMakeLists.txt CMakeLists.txt
-index 2f76264..7e6d920 100644
 --- CMakeLists.txt
 +++ CMakeLists.txt
-@@ -346,6 +346,7 @@ IF (WITH_MRUBY)
+@@ -351,6 +351,7 @@
      TARGET_LINK_LIBRARIES(h2o
-         "${CMAKE_BINARY_DIR}/mruby/host/lib/libmruby.a"
-         "${CMAKE_BINARY_DIR}/mruby/host/mrbgems/mruby-onig-regexp/Onigmo-Onigmo-5.15.0/.libs/libonig.a"
+         "${CMAKE_CURRENT_BINARY_DIR}/mruby/host/lib/libmruby.a"
+         "${CMAKE_CURRENT_BINARY_DIR}/mruby/host/mrbgems/mruby-onig-regexp/Onigmo-Onigmo-5.15.0/.libs/libonig.a"
 +        "GeoIP"
          "m")
      ADD_DEPENDENCIES(h2o mruby)
  ENDIF (WITH_MRUBY)
-
