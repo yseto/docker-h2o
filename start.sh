@@ -12,4 +12,10 @@ for v in  $H2O_PORT; do
     ports=(${ports[@]} "$v")
 done
 
+cp /app/h2o.conf /h2o/h2o.conf
+
+env \
+    | cut -d = -f 1 \
+    | xargs -n 1 -I % perl -i -lpe 's{__%__}{$ENV{%}}g' /h2o/h2o.conf
+
 exec start_server ${ports[@]} -- h2o -c $@
